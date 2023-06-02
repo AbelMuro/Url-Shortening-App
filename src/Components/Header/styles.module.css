@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    gap: 101px;
+}
+
+.image{
+    width: 733px;
+    object-fit: contain;
+}
+
+.textBox{
+    width: 564px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.title{
+    font-family: var(--font);
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 90px;
+    letter-spacing: -2px; 
+    color: #34313D;
+}
+
+.desc{
+    font-family: var(--font);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    color: #9E9AA8;
+    margin-bottom: 33px;
+}
+
+.getStartedButton{
+    background-color: #2BD0D0;
+    color: white;
+    width: 197px;
+    height: 56px;
+    border-radius: 28px;
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.getStartedButton:hover{
+    background-color: #9AE3E3;
+}

@@ -1,18 +1,24 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styles from './styles.module.css';
 import icons from './icons';
 import useMediaQuery from '../../Hooks/useMediaQuery';
+import { Context } from '../../Context';
 
 
 //implement a dialog option when the user clicks on the hamburger icon
 function NavigationBar() {
     const mobile = useMediaQuery('(max-width: 620px)');
+    const {openDialog, setOpenDialog} = useContext(Context);
+
+    const handleMobileIcon = () => {
+        setOpenDialog(!openDialog);
+    }
 
     return(
         mobile ?  
             <nav className={styles.mobileContainer}>
                 <img src={icons['logo']} className={styles.mobileLogo} alt='Shortly'/>    
-                <img src={icons['hamburgerIcon']} className={styles.hamburger} alt='hamburger menu icon'/>
+                <img src={icons['hamburgerIcon']} className={styles.hamburger} alt='hamburger menu icon' onClick={handleMobileIcon}/>
             </nav> 
             : 
             <nav className={styles.container}>
