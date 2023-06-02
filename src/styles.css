@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('./Assets/Font/Poppins-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('./Assets/Font/Poppins-Medium.ttf');
+    font-weight: 500;
+}
+
+:root{
+    --font: 'poppins';
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    transition: all 0.2s linear;
+}
+
+body{
+    min-height: 100vh;
+    background-color: white;
+}
