@@ -10,6 +10,12 @@
     font-weight: 500;
 }
 
+@font-face {
+    font-family: 'poppins';
+    src: url('./Assets/Font/Poppins-MediumItalic.ttf');
+    font-style: italic;
+}
+
 :root{
     --font: 'poppins';
 }
@@ -26,4 +32,5 @@
 body{
     min-height: 100vh;
     background-color: white;
+    overflow-x: hidden;
 }

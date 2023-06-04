@@ -1,15 +1,19 @@
 .container{
-    display: flex;
+    width: 1110px;
+    display: grid;
+    grid-template-columns: 564px 733px;
     gap: 101px;
+    align-items: center;
+    margin: 0px auto 152px auto;
 }
 
 .image{
-    width: 733px;
+    width: 100%;
     object-fit: contain;
 }
 
 .textBox{
-    width: 564px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -49,4 +53,71 @@
 
 .getStartedButton:hover{
     background-color: #9AE3E3;
+}
+
+@media(max-width: 1200px){
+    .title{
+        font-size: 42px;
+        letter-spacing: -1.05px;
+        line-height: 48px;
+    }
+
+    .desc{
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0.12px;
+    }
+
+    .container{
+        width: 90%;
+        justify-content: space-between;
+        grid-template-columns: 40% 607px;
+        gap: 60px;
+    }
+}
+
+@media(max-width: 840px) {
+    .title{
+        width: 302px;
+    }
+    .container{
+        gap: 20px;
+    }
+}
+
+@media(max-width: 620px) {
+    .container{
+        grid-template-columns: 100%;
+        gap: 37px;
+        margin-bottom: 168px;
+    }
+
+    .textBox{
+        gap: 15px;
+    }
+
+    .image{
+        width: 460px;
+        grid-row: 1/2;
+        margin: auto;
+    }
+
+    .textBox{
+        grid-row: 2/3;
+    }
+
+    .title, .desc{
+        text-align: center;
+    }
+    .title{
+        margin: auto;
+    }
+
+    .desc{
+        margin-bottom: 17px;
+    }
+
+    .getStartedButton{
+        margin: auto;
+    }
 }
