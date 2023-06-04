@@ -1,5 +1,190 @@
 .container{
     width: 100%;
-    height: 1181px;
+    min-height: 825px;
     background-color: #EFF1F7;
+    border: 1px solid transparent;              /* for margin collapse*/
+} 
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    width: 1110px;
+    row-gap: 18px;
+    column-gap: 30px;
+    margin: 204px auto 208px auto;
+    position: relative;
+}
+
+.title{
+    font-family: var(--font);
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: #34313D;   
+    grid-column: 1/4;
+    text-align: center;
+}
+
+.desc{
+    width: 540px;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.12px;
+    color: rgb(158, 154, 168);
+    grid-column: 1/4;
+    text-align: center;
+    margin: 0px auto 82px auto;
+}
+
+.statisticBox{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 77px 32px 0px 32px;
+    position: relative;
+    z-index: 30;
+}
+
+.statisticBox:nth-of-type(2){
+    top: 44px;
+}
+
+.statisticBox:nth-of-type(3){
+    top: 88px;
+}
+
+.statisticsIconContainer{
+    width: 88px;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #3A3054;
+    position: absolute;
+    top: -40px
+}
+
+.statisticsIcon{
+    width: 40px;
+    object-fit: contain;
+}
+
+.statisticTitle{
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: #34313D;
+}
+
+.statisticsDesc{
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
+    color: #9E9AA8;
+    margin-bottom: 41px;
+}
+
+.line{
+    width: 100%;
+    height: 8px;
+    background-color: #2BD0D0;
+    position: absolute;
+    top: 382px;
+    z-index: 10;
+    transition: none;
+}
+
+@media(max-width: 1200px){
+    .statistics{
+        width: 90%;
+        grid-template-columns: repeat(3, 32%);
+        justify-content: center;
+    }
+
+    .statisticTitle{
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .statisticsDesc{
+        font-size: 14px;
+        line-height: 23px;
+    }
+
+    .title{
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .desc{
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.11px;
+    }
+}
+
+@media(max-width: 700px){
+    .statistics {
+        grid-template-columns: 100%;
+        gap: 16px;
+        margin: 160px auto 80px auto;
+    }
+
+    .line{
+        height: 852px;
+        width: 8px;
+        left: 0;
+        right: 0;
+        top: initial;
+        bottom: 80px;
+        margin: auto;
+    }
+
+    .title, .desc{
+        grid-column: 1/2;
+    }
+
+    .title{
+        font-size: 28px;
+        line-height: 48px;
+        letter-spacing: -0.7px
+    }    
+
+    .desc{
+        width: 100%;
+        margin-bottom: 76px;
+    }
+
+    .statisticBox{
+        min-height: 237px;
+        align-items: center;
+    }
+
+    .statisticBox:not(.statisticBox:nth-of-type(3)){
+        margin-bottom: 76px;
+    }
+
+    .statisticBox:nth-of-type(2), .statisticBox:nth-of-type(3){
+        top: 0px;
+    }
+
+    .statisticTitle{
+        font-size: 22px;
+        line-height: 33px;
+    }
+
+    .statisticsDesc{
+        font-size: 15px;
+        line-height: 26px;
+        text-align: center;
+    }
 }

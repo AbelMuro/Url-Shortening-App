@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import {Context} from '../../Context';
 import useMediaQuery from '../../Hooks/useMediaQuery';
 
-function Dialog () {
+function MobileMenuDialog () {
     const {openDialog, setOpenDialog} = useContext(Context); 
     const dialog = useRef();
     const mobile = useMediaQuery('(max-width: 620px)')
@@ -55,4 +55,4 @@ function Dialog () {
     )
 }
 
-export default Dialog;
+export default MobileMenuDialog;

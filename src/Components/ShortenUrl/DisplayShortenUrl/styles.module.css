@@ -1,0 +1,109 @@
+
+.urlContainer{
+    min-height: 72px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 32px;
+    overflow: hidden;
+}
+
+.longUrl{
+    width: 320px;
+    word-wrap: break-word;
+    font-family: var(--font);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    color: #34313D;
+}
+
+.shortUrl_copyButton{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.shortUrl{
+    width: 290px;
+    word-wrap: break-word;
+    font-family: var(--font);
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+    color: #2BD0D0;
+}
+
+.copyButton{
+    width: 103px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #2BD0D0;
+    color: white;
+    font-family: var(--font);
+    font-size: 15px;
+    line-height: 22.5px;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.copyButton:hover{
+    background-color: #9AE3E3;
+}
+
+.line{
+    width: 110%;
+    height: 1px;
+    background-color: #9E9AA8;
+}
+
+
+
+@media(max-width: 900px){
+    .longUrl, .shortUrl{
+        font-size: 16px;
+        line-height: 36px;
+        letter-spacing: 0.12px;
+    }
+
+    .longUrl{
+        width: 30%;
+    }
+
+    .shortUrl{
+        width: 240px;
+    }
+
+    .shortUrl_copyButton{
+        width: 340px;
+        gap: 16px;
+    }
+}
+
+@media(max-width: 620px) {
+
+    .urlContainer {
+        flex-direction: column;
+        gap: 6px;
+        padding: 6px 16px 16px 16px;
+    }
+
+    .longUrl{
+        width: 100%;
+    }
+
+    .shortUrl_copyButton{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .copyButton{
+        width: 100%;
+    }
+}

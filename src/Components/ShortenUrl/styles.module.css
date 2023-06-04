@@ -1,17 +1,23 @@
 .container{
     width: 1110px;
-    height: 168px;
-    padding: 0px 64px;
+    min-height: 168px;
+    padding: 52px 64px 0px 64px;
     background-image: url('./images/bg-shorten-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: #3A3054;
     border-radius: 10px;
     position: absolute;
     top: 720px;
     left: 0;
     right: 0;
+    z-index: 30;
     margin: auto;
-    display: flex;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: 769px 188px;
+    grid-template-rows: 64px 18px;
+    column-gap: 24px;
+    row-gap: 8px;
     justify-content: space-between;
     align-items: center;
 }
@@ -46,8 +52,6 @@
 
 .errorMessage{
     display: none;
-    position: absolute;
-    bottom: -25px;
     font-family: var(--font);
     font-size: 16px;
     line-height: 18px;
@@ -114,7 +118,7 @@
 }
 
 .shortUrl{
-    width: 216px;
+    width: 290px;
     word-wrap: break-word;
     font-family: var(--font);
     font-size: 20px;
@@ -147,78 +151,54 @@
     background-color: #9E9AA8;
 }
 
-
-
 @media(max-width: 1200px){
     .container{
         top: 630px;
         width: 90%;
-    }
-
-    .inputContainer{
-        width: 75%;
-    }
-
-    .submitButton{
-        flex-shrink: 0;
-    }
-}
-
-@media(max-width: 900px){
-    .longUrl, .shortUrl{
-        font-size: 16px;
-        line-height: 36px;
-        letter-spacing: 0.12px;
-    }
-
-    .longUrl{
-        width: 30%;
-    }
-
-    .shortUrl{
-        width: 220px;
-    }
-
-    .shortUrl_copyButton{
-        width: 280px
+        grid-template-columns: 1fr 188px;
     }
 }
 
 @media(max-width: 800px) {
     .container{
         padding: 24px;
+        padding: 52px 24px 0px 24px;
     }
 }
 
 @media(max-width: 620px) {
     .container{
+        background-image: url('./images/bg-shorten-mobile.svg');
+        background-position:  0px -100px;
+        grid-template-columns: 100%;
+        grid-template-rows: initial;
         flex-direction: column;
+        padding-top: 24px;
+        padding-bottom: 24px;
         gap: 16px;
         top: 770px;
     }
 
-    .inputContainer, .submitButton, .input{
+    .submitButton, 
+    .input{
         height: 48px;
         width: 100%;
     }
-    .urlContainer {
-        flex-direction: column;
-        gap: 6px;
-        padding: 6px 16px 16px 16px;
+
+    .input{
+        font-size: 16px;
+        line-height: 36px;
+        letter-spacing: 0.12px;
+        padding-left: 16px;
     }
 
-    .longUrl{
-        width: 100%;
+    .submitButton{
+        font-size: 18px;
+        line-height: 27px;
     }
 
-    .shortUrl_copyButton{
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    .copyButton{
-        width: 100%;
+    .errorMessage{
+        grid-row: 2/3;
     }
 }
 

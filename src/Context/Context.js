@@ -6,10 +6,13 @@ export default function ShareContext(App) {
 
     return () => {
         const [openDialog, setOpenDialog] = useState(false);
+        const [expandContainer, setExpandContainer] = useState('');
 
         const value = {
             openDialog,
-            setOpenDialog
+            setOpenDialog,
+            expandContainer, 
+            setExpandContainer
         }
         return(
             <Context.Provider value={value}>
