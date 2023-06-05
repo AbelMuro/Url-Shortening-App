@@ -29,6 +29,7 @@ function MobileMenuDialog () {
         }
     }, [openDialog])
 
+
     return(
         <dialog className={styles.container} ref={dialog}>
             <ul className={styles.navLinks}>
