@@ -46,8 +46,8 @@ function ShortenUrl() {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/x-www-form-urlencoded',
-                    'X-RapidAPI-Key': '908af369abmsh40faa81094928ecp1b23e0jsne2a440d41836',
-                    'X-RapidAPI-Host': 'url-shortener-service.p.rapidapi.com'
+                    'X-RapidAPI-Key': process.env.XRapidAPIKey,
+                    'X-RapidAPI-Host': process.env.XRapidAPIHost
                 },
                 body: new URLSearchParams({
                     url: url
